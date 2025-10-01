@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHIẾU ĐĂNG KÝ - LẠC HỒNG</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        /* Container chính của Form */
+        .container {
+            width: 700px;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc; /* Thêm viền nhẹ */
+        }
+
+        /*  Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding-bottom: 10px;
+        }
+
+        
+        
+       
+        .divider {
+            border-top: 3px solid #e3001b;
+            margin-bottom: 25px;
+            margin-top: 10px; 
+        }
+        
+        /* Tiêu đề Form */
+        h1 {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 35px;
+        }
+
+        /* Cấu trúc hàng form */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            width: 150px; 
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        
+        .form-input-text, select, textarea {
+            padding: 5px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .full-width-input {
+            flex-grow: 1; 
+            max-width: 500px; 
+            height: 35px;
+        }
+        
+        .short-input {
+            width: 100px; 
+            height: 35px;
+        }
+
+        .required-star {
+            color: #e3001b;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        
+        .radio-group label, .checkbox-group label {
+            margin-right: 20px;
+            font-weight: normal;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 3px;
+        }
+
+        /* Textarea */
+        textarea {
+            resize: none;
+            width: 500px;
+            height: 100px;
+        }
+        
+        /* File Upload Row */
+        .file-upload-display {
+            display: flex;
+            align-items: center;
+        }
+
+        .file-path-input {
+            width: 350px;
+            height: 35px;
+            margin-right: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .browse-button {
+            padding: 5px 15px;
+            border: 1px solid #999;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        /* Nút Submit/Reset */
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .form-button {
+            padding: 8px 25px;
+            margin: 0 10px;
+            border: 1px solid #777;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+        
+        .submit-button {
+            background-color: #dee8f1; 
+        }
+        
+        .reset-button {
+            background-color: #f0f0f0; 
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo-left">
+            
+            <img src="lachong.gif" alt="Logo Lạc Hồng" style="width: 180px; height: 50px;">
+        </div>
+        <div class="logo-right">
+           
+           
+            <img src="Flash.gif" alt="Logo fD" style="height: 50px;">
+            
+            
+            <img src="dreamweaver.gif" alt="Logo A" style="height: 50px;">
+            
+            
+            <img src="adobe.gif" alt="Logo Adobe" style="height: 50px;">
+        </div>
+    </div>
+    
+    <div class="divider"></div>
+
+    <h1>PHIẾU ĐĂNG KÝ</h1>
+
+    <form action="#" method="post">
+        
+        <!-- Họ và tên -->
+        <div class="form-row">
+            <label for="ho-ten" class="form-label">Họ và tên :</label>
+            <input type="text" id="ho-ten" name="ho-ten" class="form-input-text full-width-input" required>
+            <span class="required-star">(*)</span>
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="form-row">
+            <label for="dia-chi" class="form-label">Địa chỉ :</label>
+            <input type="text" id="dia-chi" name="dia-chi" class="form-input-text full-width-input">
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" id="email" name="email" class="form-input-text full-width-input" required>
+            <span class="required-star">(*)</span>
+        </div>
+
+        <!-- Giới tính -->
+        <div class="form-row">
+            <span class="form-label">Giới tính :</span>
+            <div class="radio-group">
+                <label><input type="radio" id="nam" name="gioi-tinh" value="Nam" checked> Nam</label>
+                <label><input type="radio" id="nu" name="gioi-tinh" value="Nữ"> Nữ</label>
+            </div>
+        </div>
+
+        <!-- Tuổi -->
+        <div class="form-row">
+            <label for="tuoi" class="form-label">Tuổi :</label>
+            <input type="number" id="tuoi" name="tuoi" class="form-input-text short-input" required min="10" max="100">
+            <span class="required-star">(*)</span>
+        </div>
+
+        <!-- Sở thích -->
+        <div class="form-row" style="align-items: flex-start;">
+            <span class="form-label">Sở thích :</span>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="so-thich[]" value="The thao"> Thể thao</label>
+                <label><input type="checkbox" name="so-thich[]" value="Van hoc"> Văn học</label>
+                <label><input type="checkbox" name="so-thich[]" value="CNTT"> Công nghệ thông tin</label>
+                <label><input type="checkbox" name="so-thich[]" value="Lich su"> Lịch sử</label>
+                <label><input type="checkbox" name="so-thich[]" value="Game"> Game</label>
+            </div>
+        </div>
+
+        <!-- Chuyên ngành -->
+        <div class="form-row">
+            <label for="chuyen-nganh" class="form-label">Chuyên ngành:</label>
+            <select id="chuyen-nganh" name="chuyen-nganh" style="width: 200px; height: 35px;">
+                <option value="CNWeb" selected>Công nghệ Web</option>
+                <option value="DTH">Đồ họa</option>
+                <option value="LTDD">Lập trình Di động</option>
+            </select>
+        </div>
+        
+        <!-- Gửi hình -->
+        <div class="form-row">
+            <label for="gui-hinh" class="form-label">Gửi hình:</label>
+            <div class="file-upload-display">
+                <!-- Ô hiển thị đường dẫn file -->
+                <input type="text" id="file-path-display" class="form-input-text file-path-input" disabled placeholder=" ">
+                <!-- Nút Browse... giả lập -->
+                <label for="gui-hinh-input" class="browse-button">Browse...</label>
+                <!-- Input type="file" thực tế, bị ẩn -->
+                <input type="file" id="gui-hinh-input" name="gui-hinh" style="display: none;">
+            </div>
+        </div>
+        <script>
+            // Script để hiển thị tên file được chọn vào ô text
+            document.getElementById('gui-hinh-input').addEventListener('change', function() {
+                const filePathDisplay = document.getElementById('file-path-display');
+                if (this.files.length > 0) {
+                    filePathDisplay.value = this.files[0].name;
+                } else {
+                    filePathDisplay.value = '';
+                }
+            });
+        </script>
+
+        
+        <div class="form-row" style="align-items: flex-start;">
+            <label for="yeu-cau" class="form-label">Yêu cầu:</label>
+            <textarea id="yeu-cau" name="yeu-cau" class="form-input-text"></textarea>
+        </div>
+
+        
+        <div class="button-group">
+            <button type="submit" class="form-button submit-button">Gởi thông tin</button>
+            <button type="reset" class="form-button reset-button">Nhập lại</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
